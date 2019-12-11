@@ -35,7 +35,9 @@
             this.txtNguoiThucHien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnChon = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbChucNang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +46,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(206, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 39);
+            this.label1.Size = new System.Drawing.Size(397, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thương Mại Điện Tử";
             // 
@@ -66,9 +68,9 @@
             this.lvChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvChucNang.FullRowSelect = true;
             this.lvChucNang.HideSelection = false;
-            this.lvChucNang.Location = new System.Drawing.Point(3, 26);
+            this.lvChucNang.Location = new System.Drawing.Point(3, 32);
             this.lvChucNang.Name = "lvChucNang";
-            this.lvChucNang.Size = new System.Drawing.Size(687, 262);
+            this.lvChucNang.Size = new System.Drawing.Size(687, 256);
             this.lvChucNang.TabIndex = 0;
             this.lvChucNang.UseCompatibleStateImageBehavior = false;
             this.lvChucNang.View = System.Windows.Forms.View.Details;
@@ -104,11 +106,22 @@
             this.btnChon.UseVisualStyleBackColor = true;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Ass2Database.Properties.Resources.LogoBK;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMainInterface
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 462);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnChon);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.gbChucNang);
@@ -119,6 +132,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giao diện chính";
             this.gbChucNang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +147,7 @@
         private System.Windows.Forms.ColumnHeader txtNguoiThucHien;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnChon;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
