@@ -33,6 +33,8 @@ namespace Ass2Database
             item7.SubItems.Add("Đăng Dũng");
             ListViewItem item8 = new ListViewItem("Xem thông tin tất cả đơn hàng");
             item8.SubItems.Add("Đăng Dũng");
+            ListViewItem item9 = new ListViewItem("Thêm khách hàng");
+            item9.SubItems.Add("Trung Tính");
             lvChucNang.Items.Add(item1);
             lvChucNang.Items.Add(item2);
             lvChucNang.Items.Add(item3);
@@ -41,6 +43,7 @@ namespace Ass2Database
             lvChucNang.Items.Add(item6);
             lvChucNang.Items.Add(item7);
             lvChucNang.Items.Add(item8);
+            lvChucNang.Items.Add(item9);
         }
 
         private void lvChucNang_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,6 +108,11 @@ namespace Ass2Database
                 else if (getFunction== "Xem thông tin tất cả đơn hàng")
                 {
                     frmTatCaDonHang frmtatcaDonHang = new frmTatCaDonHang();
+                    frmtatcaDonHang.ShowDialog();
+                }
+                else if (getFunction == "Thêm khách hàng")
+                {
+                    frmTh frmtatcaDonHang = new frmTatCaDonHang();
                     frmtatcaDonHang.ShowDialog();
                 }
 

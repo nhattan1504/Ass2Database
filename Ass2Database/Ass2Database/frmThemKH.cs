@@ -76,6 +76,52 @@ namespace Ass2Database
                     sqlCommand.CommandText = "themKH";
                     sqlCommand.Connection = conn;
 
+                    SqlParameter paraMakhachhang = new SqlParameter("@makhachhang", SqlDbType.VarChar, 10);
+                    paraMakhachhang.Value = txtMakhachhang.Text;
+                    sqlCommand.Parameters.Add(paraMakhachhang);
+
+                    SqlParameter paraHoten = new SqlParameter("@hoten", SqlDbType.NVarChar, 100);
+                    paraHoten.Value = txtHoten.Text;
+                    sqlCommand.Parameters.Add(paraHoten);
+
+                    SqlParameter paraEmail = new SqlParameter("@email", SqlDbType.VarChar, 100);
+                    paraEmail.Value = txtEmail.Text;
+                    sqlCommand.Parameters.Add(paraEmail);
+
+                    SqlParameter paraMatkhau = new SqlParameter("@matkhau", SqlDbType.VarChar, 20);
+                    paraMatkhau.Value = txtMatkhau.Text;
+                    sqlCommand.Parameters.Add(paraMatkhau);
+
+                    SqlParameter paraGioitinh = new SqlParameter("@gioitinh", SqlDbType.Char, 1);
+                    paraGioitinh.Value = txtGioitinh.Text;
+                    sqlCommand.Parameters.Add(paraGioitinh);
+
+                    SqlParameter paraNgaysinh = new SqlParameter("@ngaysinh", SqlDbType.Date);
+                    paraNgaysinh.Value = dtpNgaysinh.Value;
+                    sqlCommand.Parameters.Add(paraNgaysinh);
+
+                    SqlParameter paraSodienthoai = new SqlParameter("@sodienthoai", SqlDbType.VarChar, 10);
+                    paraSodienthoai.Value = txtSodienthoai.Text;
+                    sqlCommand.Parameters.Add(paraSodienthoai);
+
+                    SqlParameter paraDiachi = new SqlParameter("@diachi", SqlDbType.NVarChar, 100);
+                    paraDiachi.Value = txtDiachi.Text;
+                    sqlCommand.Parameters.Add(paraDiachi);
+
+                    sqlCommand.Parameters.Add("@result", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+                    int ret = sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show(sqlCommand.Parameters["@result"].Value.ToString());
+                    if (ret > 0)
+                    {
+                        txtDiachi.Text = "";
+                        txtEmail.Text = "";
+                        txtHoten.Text = "";
+                        txtMakhachhang.Text = "";
+                        txtMatkhau.Text = "";
+                        txtSodienthoai.Text = "";
+                        txtGioitinh.Text = "";
+                    }
+
                 }
                 catch (Exception ex)
                 {

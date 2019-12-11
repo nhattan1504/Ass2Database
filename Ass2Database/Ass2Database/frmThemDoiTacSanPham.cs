@@ -145,10 +145,7 @@ namespace Ass2Database
                         txtSodienthoai.Text = "";
                         txtTencuahang.Text = "";
                         lvSanpham.Items.Clear();
-                    }
-
-
-                    
+                    }                    
 
                 }
                 catch (Exception ex)
